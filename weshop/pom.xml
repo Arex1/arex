@@ -96,5 +96,6 @@
         <module>ws-registry</module>
         <module>ws-api-gateway</module>
         <module>ws-item</module>
+        <module>ws-common</module>
     </modules>
 </project>
