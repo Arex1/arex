@@ -1,5 +1,7 @@
 package com.weshop.common.advice;
 
+import com.weshop.common.exception.WeShopException;
+import com.weshop.common.result.ExceptionResult;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -20,7 +22,8 @@ public class CommonExceptionHander {
      * @return
      */
     @ExceptionHandler(value = RuntimeException.class)
-    public ResponseEntity<String> handerException(RuntimeException e){
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+    public ResponseEntity<ExceptionResult> handerException(WeShopException e){
+        return ResponseEntity.status(e.getExceptionEnum().getCode())
+                .body(new ExceptionResult(e.getExceptionEnum()));
     }
 }

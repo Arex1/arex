@@ -1,0 +1,10 @@
+
+server:
+  port: 110
+spring:
+  application:
+    name: ws-sms
+
+# mq配置
+
+#短信配置

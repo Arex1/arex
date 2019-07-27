@@ -98,5 +98,7 @@
         <module>ws-item</module>
         <module>ws-common</module>
         <module>mybatis-generater</module>
+        <module>ws-sms</module>
+        <module>ws-user</module>
     </modules>
 </project>
