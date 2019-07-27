@@ -97,5 +97,6 @@
         <module>ws-api-gateway</module>
         <module>ws-item</module>
         <module>ws-common</module>
+        <module>mybatis-generater</module>
     </modules>
 </project>
