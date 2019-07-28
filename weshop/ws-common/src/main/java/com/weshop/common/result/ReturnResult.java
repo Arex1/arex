@@ -11,7 +11,7 @@ import lombok.Data;
  * 2019/7/27
  */
 @Data
-public class ExceptionResult {
+public class ReturnResult {
 
     //返回异常的状态
     private int status;
@@ -20,7 +20,7 @@ public class ExceptionResult {
     //返回异常的时间点
     private Long timestamp;
 
-    public ExceptionResult(ExceptionEnum exceptionEnum){
+    public ReturnResult(ExceptionEnum exceptionEnum){
         this.status = exceptionEnum.getCode();
         this.message = exceptionEnum.getMsg();
         this.timestamp = System.currentTimeMillis();

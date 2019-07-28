@@ -13,11 +13,11 @@
     <artifactId>ws-registry</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <!--注册中心eureka依赖-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-
     </dependencies>
 </project>

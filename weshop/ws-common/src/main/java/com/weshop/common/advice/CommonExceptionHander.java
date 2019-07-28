@@ -1,11 +1,17 @@
 package com.weshop.common.advice;
 
+import com.weshop.common.exception.BusinessException;
 import com.weshop.common.exception.WeShopException;
-import com.weshop.common.result.ExceptionResult;
+import com.weshop.common.result.ReturnResult;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Arex
@@ -22,8 +28,9 @@ public class CommonExceptionHander {
      * @return
      */
     @ExceptionHandler(value = RuntimeException.class)
-    public ResponseEntity<ExceptionResult> handerException(WeShopException e){
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<ReturnResult> handerException(WeShopException e){
         return ResponseEntity.status(e.getExceptionEnum().getCode())
-                .body(new ExceptionResult(e.getExceptionEnum()));
+                .body(new ReturnResult(e.getExceptionEnum()));
     }
 }

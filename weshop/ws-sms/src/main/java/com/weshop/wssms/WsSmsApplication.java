@@ -9,6 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * com.weshop.wssms
  * 2019/7/28
  */
-@SpringBootApplication()
+@SpringBootApplication
 public class WsSmsApplication {
 }
