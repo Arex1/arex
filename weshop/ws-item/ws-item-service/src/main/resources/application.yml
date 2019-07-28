@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/test
     username: root
-    password: 123456
+    password: rootroot
     hikari:
       maximum-pool-size: 30
       minimum-idle: 10

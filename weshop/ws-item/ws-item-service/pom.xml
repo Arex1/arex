@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.weshop.service</groupId>
     <artifactId>ws-item-service</artifactId>
 
     <dependencies>
@@ -50,7 +49,7 @@
         <dependency>
             <groupId>com.weshop.service</groupId>
             <artifactId>ws-item-interface</artifactId>
-            <version>${leyou.latest.version}</version>
+            <version>${ws.latest.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
